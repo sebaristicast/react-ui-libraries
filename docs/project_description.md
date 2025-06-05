@@ -73,19 +73,11 @@ Información detallada de cada biblioteca:
 - Descripción breve con Puntos fuertes y casos de uso ideales
 - Número de descargas
 - Cantidad total de componentes disponibles
-- Modelo de precio (gratuito/pago)
-- Costos mensuales (si aplica)
-- Fecha de última actualización
-- Compatibilidad con versiones de React
-- Empresas destacadas que la utilizan
 
 ### 3. Funcionalidades de Filtrado y Ordenación
 
 - Ordenar por número de descargas
-- Filtrar por precio (gratis/pago)
 - Ordenar por cantidad de componentes
-- Filtrar por rango de precios
-- Ordenar por popularidad
 - Filtrar por tipo de uso (empresarial, personal, etc.)
 
 ### 4. Características Técnicas

@@ -6,7 +6,9 @@ interface MuiButtonProps {
 
 export const MuiButton = ({ isLoading = false }: MuiButtonProps) => {
   if (isLoading) {
-    return <Skeleton variant="rectangular" width={120} height={36} />;
+    return (
+      <Skeleton variant="rounded" width={90} height={36} animation="wave" />
+    );
   }
 
   return <Button variant="contained">Button</Button>;

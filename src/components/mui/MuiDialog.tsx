@@ -19,12 +19,21 @@ export const MuiDialog = ({ isLoading = false }: MuiDialogProps) => {
   const handleClose = () => setOpen(false);
 
   if (isLoading) {
-    return <Skeleton variant="rectangular" width={120} height={36} />;
+    return (
+      <Skeleton variant="rounded" width={100} height={36} animation="wave" />
+    );
   }
 
   return (
     <>
-      <Button variant="outlined" onClick={handleClickOpen}>
+      <Button
+        variant="outlined"
+        onClick={handleClickOpen}
+        sx={{
+          minWidth: 100,
+          height: 36,
+        }}
+      >
         Dialog
       </Button>
       <Dialog open={open} onClose={handleClose}>

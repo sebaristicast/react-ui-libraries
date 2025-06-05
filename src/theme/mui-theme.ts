@@ -1,3 +1,8 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme } from '@mui/material';
+import type { PaletteMode } from '@mui/material';
 
-export const theme = createTheme(); 
+export const getTheme = (mode: PaletteMode) => createTheme({
+  palette: {
+    mode,
+  },
+}); 
