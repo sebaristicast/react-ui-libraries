@@ -34,17 +34,17 @@ export const Header = ({
     <Box
       sx={{
         position: "absolute",
-        top: 16,
+        top: { xs: 8, sm: 16 },
         left: 0,
         right: 0,
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        px: 2,
-        gap: 2,
+        px: { xs: 1, sm: 2 },
+        gap: { xs: 1, sm: 2 },
       }}
     >
-      <Box sx={{ display: "flex", gap: 1 }}>
+      <Box sx={{ display: "flex", gap: { xs: 0.5, sm: 1 } }}>
         <IconButton
           onClick={() => onLoadingChange(!isLoading)}
           sx={{
@@ -52,7 +52,7 @@ export const Header = ({
             color: isLoading ? theme.palette.primary.main : "text.primary",
           }}
         >
-          <ViewStreamIcon sx={{ fontSize: 24 }} />
+          <ViewStreamIcon sx={{ fontSize: { xs: 20, sm: 24 } }} />
         </IconButton>
         <LanguageSelector />
       </Box>
@@ -63,6 +63,10 @@ export const Header = ({
         sx={{
           fontWeight: "bold",
           color: "text.primary",
+          fontSize: { xs: "0.875rem", sm: "1.5rem" },
+          textAlign: "center",
+          maxWidth: { xs: "40%", sm: "none" },
+          lineHeight: { xs: 1.2, sm: 1.5 },
         }}
       >
         {t("header.title")}
@@ -70,9 +74,9 @@ export const Header = ({
 
       <IconButton onClick={onDarkModeChange} sx={buttonStyle}>
         {isDarkMode ? (
-          <LightModeIcon sx={{ fontSize: 24 }} />
+          <LightModeIcon sx={{ fontSize: { xs: 20, sm: 24 } }} />
         ) : (
-          <DarkModeIcon sx={{ fontSize: 24 }} />
+          <DarkModeIcon sx={{ fontSize: { xs: 20, sm: 24 } }} />
         )}
       </IconButton>
     </Box>

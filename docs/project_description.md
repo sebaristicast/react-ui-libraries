@@ -8,7 +8,7 @@ Aplicación web que permite comparar y evaluar las principales bibliotecas de co
 
 - Button
 - TextField/Input
-- Loading Spinner
+- Slider
 - Dialog/Modal
 - Rating
 

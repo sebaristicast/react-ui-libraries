@@ -5,17 +5,28 @@ import { useState, useMemo } from "react";
 import { getTheme } from "./theme/mui-theme";
 import { MuiButton } from "./components/mui/MuiButton";
 import { MuiTextField } from "./components/mui/MuiTextField";
-import { MuiLoadingSpinner } from "./components/mui/MuiLoadingSpinner";
 import { MuiDialog } from "./components/mui/MuiDialog";
 import { MuiRating } from "./components/mui/MuiRating";
+import { MuiSlider } from "./components/mui/MuiSlider";
 import { Header } from "./components/Header";
 import { UILibraryCard } from "./components/UILibraryCard";
 import { uiLibrariesData } from "./data/ui-libraries";
 import { SEO } from "./components/SEO";
+import { useTranslation } from "react-i18next";
 
-function App() {
-  const [isLoading, setIsLoading] = useState(false);
+const muiLibrary = {
+  name: "mui",
+  description: "libraries.mui.description",
+  metrics: {
+    downloads: 2200000,
+    totalComponents: 128,
+  },
+};
+
+export const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const { i18n } = useTranslation();
 
   const theme = useMemo(
     () => getTheme(isDarkMode ? "dark" : "light"),
@@ -25,9 +36,9 @@ function App() {
   const muiComponents = {
     Button: MuiButton,
     TextField: MuiTextField,
-    LoadingSpinner: MuiLoadingSpinner,
     Dialog: MuiDialog,
     Rating: MuiRating,
+    Slider: MuiSlider,
   };
 
   return (
@@ -45,10 +56,10 @@ function App() {
         }}
       >
         <Header
-          isLoading={isLoading}
           isDarkMode={isDarkMode}
-          onLoadingChange={setIsLoading}
+          isLoading={isLoading}
           onDarkModeChange={() => setIsDarkMode(!isDarkMode)}
+          onLoadingChange={setIsLoading}
         />
 
         <Box
@@ -62,7 +73,7 @@ function App() {
           }}
         >
           <UILibraryCard
-            libraryInfo={uiLibrariesData[0]}
+            libraryInfo={muiLibrary}
             components={muiComponents}
             isLoading={isLoading}
           />
@@ -70,6 +81,6 @@ function App() {
       </Box>
     </ThemeProvider>
   );
-}
+};
 
 export default App;

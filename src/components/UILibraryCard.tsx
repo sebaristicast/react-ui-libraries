@@ -39,21 +39,33 @@ export const UILibraryCard = ({
   components,
   isLoading,
 }: UILibraryCardProps) => {
-  const { Button, TextField, LoadingSpinner, Dialog, Rating } = components;
+  const { Button, TextField, Dialog, Rating, Slider } = components;
   const { t } = useTranslation();
 
   return (
     <Card variant="outlined" sx={{ width: "100%" }}>
-      <CardContent sx={{ p: 2, "&:last-child": { pb: 2 } }}>
-        <Stack spacing={1}>
-          <Typography variant="subtitle1" fontWeight="medium">
+      <CardContent
+        sx={{
+          p: { xs: 1.5, sm: 2 },
+          "&:last-child": { pb: { xs: 1.5, sm: 2 } },
+        }}
+      >
+        <Stack spacing={{ xs: 0.5, sm: 1 }}>
+          <Typography
+            variant="subtitle1"
+            fontWeight="medium"
+            sx={{ fontSize: { xs: "1rem", sm: "1.125rem" } }}
+          >
             {t(`libraries.${libraryInfo.name}.name`)}
           </Typography>
 
           <Typography
             variant="body2"
             color="text.secondary"
-            sx={{ fontSize: "0.875rem" }}
+            sx={{
+              fontSize: { xs: "0.75rem", sm: "0.875rem" },
+              lineHeight: { xs: 1.4, sm: 1.5 },
+            }}
           >
             {t(libraryInfo.description)}
           </Typography>
@@ -61,8 +73,8 @@ export const UILibraryCard = ({
           <Box
             sx={{
               display: "flex",
-              gap: 3,
-              fontSize: "0.875rem",
+              gap: { xs: 2, sm: 3 },
+              fontSize: { xs: "0.75rem", sm: "0.875rem" },
             }}
           >
             <InfoItem
@@ -76,12 +88,12 @@ export const UILibraryCard = ({
           </Box>
         </Stack>
 
-        <Divider sx={{ my: 2 }} />
+        <Divider sx={{ my: { xs: 1.5, sm: 2 } }} />
 
         <Box
           sx={{
             display: "flex",
-            gap: { xs: 2, sm: 3 },
+            gap: { xs: 1.5, sm: 3 },
             alignItems: "center",
             justifyContent: "center",
             flexWrap: "wrap",
@@ -95,7 +107,7 @@ export const UILibraryCard = ({
         >
           <Button isLoading={isLoading} />
           <TextField isLoading={isLoading} />
-          <LoadingSpinner />
+          <Slider isLoading={isLoading} />
           <Dialog isLoading={isLoading} />
           <Rating isLoading={isLoading} />
         </Box>
