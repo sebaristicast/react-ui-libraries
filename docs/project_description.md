@@ -70,7 +70,7 @@ Aplicación web que permite comparar y evaluar las principales bibliotecas de co
 
 Información detallada de cada biblioteca:
 
-- Descripción breve con Puntos fuertes y casos de uso ideales
+- Descripción breve
 - Número de descargas
 - Cantidad total de componentes disponibles
 

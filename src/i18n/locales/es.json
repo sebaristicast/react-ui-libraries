@@ -1,0 +1,37 @@
+{
+  "header": {
+    "title": "Bibliotecas UI React 2025",
+    "skeletons": "Mostrar Skeletons"
+  },
+  "metrics": {
+    "downloads": "Descargas",
+    "components": "Componentes"
+  },
+  "components": {
+    "button": "Botón",
+    "textField": "Campo de Texto",
+    "dialog": "Diálogo",
+    "rating": "Calificación"
+  },
+  "libraries": {
+    "mui": {
+      "name": "Material UI (MUI)",
+      "description": "Biblioteca React que implementa Material Design. Ideal para proyectos empresariales."
+    }
+  },
+  "seo": {
+    "description": "Compara y evalúa las bibliotecas UI de React más populares. Encuentra la biblioteca de componentes perfecta para tu próximo proyecto con nuestra herramienta de comparación interactiva.",
+    "keywords": [
+      "React",
+      "Bibliotecas UI",
+      "Bibliotecas de Componentes",
+      "Material UI",
+      "Ant Design",
+      "Chakra UI",
+      "Componentes React",
+      "Desarrollo Frontend",
+      "Framework UI",
+      "Comparación UI React"
+    ]
+  }
+}

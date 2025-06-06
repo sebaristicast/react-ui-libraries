@@ -1,0 +1,37 @@
+{
+  "header": {
+    "title": "React UI Libraries 2025",
+    "skeletons": "Show Skeletons"
+  },
+  "metrics": {
+    "downloads": "Downloads",
+    "components": "Components"
+  },
+  "components": {
+    "button": "Button",
+    "textField": "Text Field",
+    "dialog": "Dialog",
+    "rating": "Rating"
+  },
+  "libraries": {
+    "mui": {
+      "name": "Material UI (MUI)",
+      "description": "React library that implements Material Design. Ideal for enterprise projects."
+    }
+  },
+  "seo": {
+    "description": "Compare and evaluate the most popular React UI libraries. Find the perfect component library for your next project with our interactive comparison tool.",
+    "keywords": [
+      "React",
+      "UI Libraries",
+      "Component Libraries",
+      "Material UI",
+      "Ant Design",
+      "Chakra UI",
+      "React Components",
+      "Frontend Development",
+      "UI Framework",
+      "React UI Comparison"
+    ]
+  }
+}

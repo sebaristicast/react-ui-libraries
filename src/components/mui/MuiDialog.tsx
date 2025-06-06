@@ -7,6 +7,7 @@ import {
   Skeleton,
 } from "@mui/material";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 interface MuiDialogProps {
   isLoading?: boolean;
@@ -14,6 +15,7 @@ interface MuiDialogProps {
 
 export const MuiDialog = ({ isLoading = false }: MuiDialogProps) => {
   const [open, setOpen] = useState(false);
+  const { t } = useTranslation();
 
   const handleClickOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -34,10 +36,10 @@ export const MuiDialog = ({ isLoading = false }: MuiDialogProps) => {
           height: 36,
         }}
       >
-        Dialog
+        {t("components.dialog")}
       </Button>
       <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>Dialog Title</DialogTitle>
+        <DialogTitle>{t("components.dialog")}</DialogTitle>
         <DialogContent>Dialog Content Description</DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Close</Button>
