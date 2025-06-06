@@ -1,3 +1,6 @@
+import type { ComponentType } from "react";
+import type { ComponentProps } from "./component-props";
+
 export type UILibraryType = 'main' | 'specialized' | 'enterprise';
 
 export interface UILibraryMetrics {
@@ -8,6 +11,7 @@ export interface UILibraryMetrics {
 export interface UILibraryInfo {
   name: string;
   description: string;
+  logoUrl: string;
   metrics: {
     downloads: number;
     totalComponents: number;
@@ -15,9 +19,9 @@ export interface UILibraryInfo {
 }
 
 export interface UILibraryComponents {
-  Button: React.ComponentType<{ isLoading?: boolean }>;
-  TextField: React.ComponentType<{ isLoading?: boolean }>;
-  Dialog: React.ComponentType<{ isLoading?: boolean }>;
-  Rating: React.ComponentType<{ isLoading?: boolean }>;
-  Slider: React.ComponentType<{ isLoading?: boolean }>;
+  Button: ComponentType<ComponentProps>;
+  TextField: ComponentType<ComponentProps>;
+  Dialog: ComponentType<ComponentProps>;
+  Rating: ComponentType<ComponentProps>;
+  Slider: ComponentType<ComponentProps>;
 } 

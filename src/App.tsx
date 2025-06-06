@@ -1,37 +1,30 @@
-import { ThemeProvider } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
-import { Box } from "@mui/material";
-import { useState, useMemo } from "react";
-import { getTheme } from "./theme/mui-theme";
+import { useState } from "react";
+import { Container, CssBaseline, ThemeProvider, Stack } from "@mui/material";
+import { ConfigProvider, theme } from "antd";
+import { useTranslation } from "react-i18next";
 import { MuiButton } from "./components/mui/MuiButton";
 import { MuiTextField } from "./components/mui/MuiTextField";
 import { MuiDialog } from "./components/mui/MuiDialog";
 import { MuiRating } from "./components/mui/MuiRating";
 import { MuiSlider } from "./components/mui/MuiSlider";
-import { Header } from "./components/Header";
+import { AntdButton } from "./components/antd/AntdButton";
+import { AntdTextField } from "./components/antd/AntdTextField";
+import { AntdDialog } from "./components/antd/AntdDialog";
+import { AntdRating } from "./components/antd/AntdRating";
+import { AntdSlider } from "./components/antd/AntdSlider";
 import { UILibraryCard } from "./components/UILibraryCard";
+import { Header } from "./components/Header";
+import { getTheme } from "./theme/mui-theme";
 import { uiLibrariesData } from "./data/ui-libraries";
-import { SEO } from "./components/SEO";
-import { useTranslation } from "react-i18next";
-
-const muiLibrary = {
-  name: "mui",
-  description: "libraries.mui.description",
-  metrics: {
-    downloads: 2200000,
-    totalComponents: 128,
-  },
-};
+import "./i18n/config";
 
 export const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const { i18n } = useTranslation();
 
-  const theme = useMemo(
-    () => getTheme(isDarkMode ? "dark" : "light"),
-    [isDarkMode]
-  );
+  const muiTheme = getTheme(isDarkMode ? "dark" : "light");
+  const { defaultAlgorithm, darkAlgorithm } = theme;
 
   const muiComponents = {
     Button: MuiButton,
@@ -41,44 +34,43 @@ export const App = () => {
     Slider: MuiSlider,
   };
 
+  const antdComponents = {
+    Button: AntdButton,
+    TextField: AntdTextField,
+    Dialog: AntdDialog,
+    Rating: AntdRating,
+    Slider: AntdSlider,
+  };
+
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <SEO />
-      <Box
-        sx={{
-          minHeight: "100vh",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          py: 3,
-          position: "relative",
+    <ThemeProvider theme={muiTheme}>
+      <ConfigProvider
+        theme={{
+          algorithm: isDarkMode ? darkAlgorithm : defaultAlgorithm,
         }}
       >
-        <Header
-          isDarkMode={isDarkMode}
-          isLoading={isLoading}
-          onDarkModeChange={() => setIsDarkMode(!isDarkMode)}
-          onLoadingChange={setIsLoading}
-        />
-
-        <Box
-          sx={{
-            width: "100%",
-            maxWidth: "md",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: 3,
-          }}
-        >
-          <UILibraryCard
-            libraryInfo={muiLibrary}
-            components={muiComponents}
+        <CssBaseline />
+        <Container maxWidth="lg" sx={{ py: 8, position: "relative" }}>
+          <Header
+            isDarkMode={isDarkMode}
             isLoading={isLoading}
+            onDarkModeChange={() => setIsDarkMode(!isDarkMode)}
+            onLoadingChange={setIsLoading}
           />
-        </Box>
-      </Box>
+          <Stack spacing={4}>
+            <UILibraryCard
+              libraryInfo={uiLibrariesData[0]}
+              components={muiComponents}
+              isLoading={isLoading}
+            />
+            <UILibraryCard
+              libraryInfo={uiLibrariesData[1]}
+              components={antdComponents}
+              isLoading={isLoading}
+            />
+          </Stack>
+        </Container>
+      </ConfigProvider>
     </ThemeProvider>
   );
 };

@@ -11,12 +11,21 @@
     "button": "Button",
     "textField": "Text Field",
     "dialog": "Dialog",
-    "rating": "Rating"
+    "rating": "Rating",
+    "slider": "Slider"
   },
   "libraries": {
     "mui": {
-      "name": "Material UI (MUI)",
-      "description": "React library that implements Material Design. Ideal for enterprise projects."
+      "name": "Material UI",
+      "description": "A comprehensive suite of UI tools and components, following Google's Material Design"
+    },
+    "antd": {
+      "name": "Ant Design",
+      "description": "An enterprise-class UI design language and React UI library with a set of high-quality components"
+    },
+    "chakra": {
+      "name": "Chakra UI",
+      "description": "A simple, modular and accessible component library that gives you the building blocks to build React applications"
     }
   },
   "seo": {

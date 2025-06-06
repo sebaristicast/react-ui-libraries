@@ -11,12 +11,21 @@
     "button": "Botón",
     "textField": "Campo de Texto",
     "dialog": "Diálogo",
-    "rating": "Calificación"
+    "rating": "Calificación",
+    "slider": "Deslizador"
   },
   "libraries": {
     "mui": {
-      "name": "Material UI (MUI)",
-      "description": "Biblioteca React que implementa Material Design. Ideal para proyectos empresariales."
+      "name": "Material UI",
+      "description": "Un conjunto completo de herramientas y componentes UI que siguen el Material Design de Google"
+    },
+    "antd": {
+      "name": "Ant Design",
+      "description": "Un lenguaje de diseño UI empresarial y biblioteca React UI con un conjunto de componentes de alta calidad"
+    },
+    "chakra": {
+      "name": "Chakra UI",
+      "description": "Una biblioteca de componentes simple, modular y accesible que te da los bloques de construcción para crear aplicaciones React"
     }
   },
   "seo": {

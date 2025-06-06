@@ -14,8 +14,6 @@ Aplicación web que permite comparar y evaluar las principales bibliotecas de co
 
 ## Bibliotecas UI Incluidas
 
-### Bibliotecas Principales
-
 1. Material UI (MUI)
 2. Ant Design
 3. Chakra UI
@@ -30,8 +28,6 @@ Aplicación web que permite comparar y evaluar las principales bibliotecas de co
 12. Joy UI
 13. Flowbite React
 14. Amplify UI
-
-### Bibliotecas Especializadas
 
 15. Grommet
 16. Blueprint UI
@@ -48,9 +44,6 @@ Aplicación web que permite comparar y evaluar las principales bibliotecas de co
 27. Magic UI
 28. Ark UI
 29. ReactBits
-
-### Bibliotecas Empresariales
-
 30. Wix Style React
 31. Helsinki Design System
 32. Spark UI

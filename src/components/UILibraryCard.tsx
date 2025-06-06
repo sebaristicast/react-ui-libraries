@@ -51,13 +51,25 @@ export const UILibraryCard = ({
         }}
       >
         <Stack spacing={{ xs: 0.5, sm: 1 }}>
-          <Typography
-            variant="subtitle1"
-            fontWeight="medium"
-            sx={{ fontSize: { xs: "1rem", sm: "1.125rem" } }}
-          >
-            {t(`libraries.${libraryInfo.name}.name`)}
-          </Typography>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+            <Box
+              component="img"
+              src={libraryInfo.logoUrl}
+              alt={t(`libraries.${libraryInfo.name}.name`)}
+              sx={{
+                height: { xs: 24, sm: 32 },
+                width: "auto",
+                objectFit: "contain",
+              }}
+            />
+            <Typography
+              variant="subtitle1"
+              fontWeight="medium"
+              sx={{ fontSize: { xs: "1rem", sm: "1.125rem" } }}
+            >
+              {t(`libraries.${libraryInfo.name}.name`)}
+            </Typography>
+          </Box>
 
           <Typography
             variant="body2"
