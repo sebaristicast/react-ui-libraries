@@ -25,31 +25,25 @@ Aplicación web que permite comparar y evaluar las principales bibliotecas de co
 9. Semantic UI React
 10. Radix UI
 11. Headless UI
-12. Joy UI
-13. Flowbite React
-14. Amplify UI
+12. Flowbite React
+13. Amplify UI
 
-15. Grommet
-16. Blueprint UI
-17. Horizon UI
-18. Tamagui
-19. Circuit UI
-20. Geist UI
-21. Park UI
-22. Yamada UI
-23. KendoReact
-24. Rewind UI
-25. SmartHR UI
-26. Base UI
-27. Magic UI
-28. Ark UI
-29. ReactBits
-30. Wix Style React
-31. Helsinki Design System
-32. Spark UI
-33. Aksara UI
-34. Shoutem UI
-35. Restyle
+14. Grommet
+15. Blueprint UI
+16. Horizon UI
+17. Tamagui
+18. Circuit UI
+19. Geist UI
+20. Park UI
+21. Yamada UI
+22. Rewind UI
+23. Base UI
+24. Magic UI
+25. Ark UI
+26. ReactBits
+27. Wix Style React
+28. Helsinki Design System
+29. Shoutem UI
 
 ## Características Principales
 

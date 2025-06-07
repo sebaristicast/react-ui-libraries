@@ -26,6 +26,110 @@
     "chakra": {
       "name": "Chakra UI",
       "description": "Una biblioteca de componentes simple, modular y accesible que te da los bloques de construcción para crear aplicaciones React"
+    },
+    "shadcn": {
+      "name": "Shadcn UI",
+      "description": "Una colección de componentes React reutilizables y bellamente diseñados construidos con Radix UI y Tailwind CSS"
+    },
+    "mantine": {
+      "name": "Mantine UI",
+      "description": "Una biblioteca de componentes React totalmente destacada con más de 100 componentes personalizables y hooks útiles"
+    },
+    "heroui": {
+      "name": "Hero UI",
+      "description": "Hermosos componentes de interfaz de usuario listos para usar, diseñados para integrarse perfectamente con Tailwind CSS"
+    },
+    "react-bootstrap": {
+      "name": "React Bootstrap",
+      "description": "La biblioteca de componentes React más popular reconstruida desde cero con Bootstrap 5"
+    },
+    "primereact": {
+      "name": "PrimeReact",
+      "description": "Una rica suite de componentes UI de código abierto para React con más de 90 componentes flexibles"
+    },
+    "semantic": {
+      "name": "Semantic UI React",
+      "description": "La integración oficial de React para Semantic UI con una API declarativa intuitiva"
+    },
+    "radix": {
+      "name": "Radix UI",
+      "description": "Componentes UI sin estilos y de bajo nivel, accesibles y personalizables para crear sistemas de diseño de alta calidad"
+    },
+    "headlessui": {
+      "name": "Headless UI",
+      "description": "Componentes UI completamente accesibles y sin estilos, diseñados para integrarse perfectamente con Tailwind CSS"
+    },
+    "flowbite": {
+      "name": "Flowbite React",
+      "description": "Biblioteca de componentes UI construida con Tailwind CSS con un diseño moderno y responsivo"
+    },
+    "amplify": {
+      "name": "AWS Amplify UI",
+      "description": "Componentes React listos para producción que funcionan sin problemas con los servicios backend de AWS"
+    },
+    "grommet": {
+      "name": "Grommet",
+      "description": "Un marco de trabajo UI React que proporciona accesibilidad, modularidad, capacidad de respuesta y temas"
+    },
+    "blueprint": {
+      "name": "Blueprint",
+      "description": "Un conjunto de componentes React UI optimizados para construir interfaces complejas y orientadas a datos"
+    },
+    "horizon": {
+      "name": "Horizon UI",
+      "description": "La biblioteca de componentes administrativos más elegante y moderna para React"
+    },
+    "tamagui": {
+      "name": "Tamagui",
+      "description": "Un sistema UI universal para React Native y Web con un rendimiento optimizado"
+    },
+    "circuit": {
+      "name": "Circuit UI",
+      "description": "Una biblioteca de componentes React moderna y accesible con un diseño minimalista"
+    },
+    "geist": {
+      "name": "Geist UI",
+      "description": "Un marco de trabajo UI React elegante y minimalista optimizado para la mejor experiencia de usuario"
+    },
+    "park": {
+      "name": "Park UI",
+      "description": "Componentes UI de alta calidad construidos sobre Ark UI con un enfoque en la accesibilidad"
+    },
+    "yamada": {
+      "name": "Yamada UI",
+      "description": "Un marco de trabajo UI React fresco y moderno con componentes personalizables y temas flexibles"
+    },
+    "rewind": {
+      "name": "Rewind UI",
+      "description": "Componentes UI modernos y accesibles construidos sobre Tailwind CSS"
+    },
+    "baseui": {
+      "name": "Base Web",
+      "description": "Un marco de trabajo de diseño React implementado con flexibilidad y accesibilidad en mente"
+    },
+    "magicui": {
+      "name": "Magic UI",
+      "description": "Componentes UI React con efectos visuales únicos y animaciones mágicas"
+    },
+    "arkui": {
+      "name": "Ark UI",
+      "description": "Componentes headless de alto rendimiento con un fuerte enfoque en la accesibilidad"
+    },
+    "reactbits": {
+      "name": "React Bits",
+      "description": "Colección moderna de componentes React UI con un diseño minimalista y elegante"
+    },
+    "wix": {
+      "name": "Wix UI",
+      "description": "Biblioteca de componentes React empresarial utilizada en los productos de Wix"
+    },
+    "helsinki": {
+      "name": "Helsinki Design",
+      "description": "Sistema de diseño oficial de la Ciudad de Helsinki implementado en React"
+    },
+    "shoutem": {
+      "name": "Shoutem UI",
+      "description": "Biblioteca de componentes React Native con un diseño moderno y personalizable"
     }
   },
   "seo": {

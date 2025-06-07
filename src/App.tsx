@@ -8,16 +8,6 @@ import { MuiTextField } from "./components/mui/MuiTextField";
 import { MuiDialog } from "./components/mui/MuiDialog";
 import { MuiRating } from "./components/mui/MuiRating";
 import { MuiSlider } from "./components/mui/MuiSlider";
-import { AntdButton } from "./components/antd/AntdButton";
-import { AntdTextField } from "./components/antd/AntdTextField";
-import { AntdDialog } from "./components/antd/AntdDialog";
-import { AntdRating } from "./components/antd/AntdRating";
-import { AntdSlider } from "./components/antd/AntdSlider";
-import { ChakraButton } from "./components/chakra/ChakraButton";
-import { ChakraTextField } from "./components/chakra/ChakraTextField";
-import { ChakraDialog } from "./components/chakra/ChakraDialog";
-import { ChakraRating } from "./components/chakra/ChakraRating";
-import { ChakraSlider } from "./components/chakra/ChakraSlider";
 import { UILibraryCard } from "./components/UILibraryCard";
 import { Header } from "./components/Header";
 import { getTheme } from "./theme/mui-theme";
@@ -40,22 +30,6 @@ export const App = () => {
     Slider: MuiSlider,
   };
 
-  const antdComponents = {
-    Button: AntdButton,
-    TextField: AntdTextField,
-    Dialog: AntdDialog,
-    Rating: AntdRating,
-    Slider: AntdSlider,
-  };
-
-  const chakraComponents = {
-    Button: ChakraButton,
-    TextField: ChakraTextField,
-    Dialog: ChakraDialog,
-    Rating: ChakraRating,
-    Slider: ChakraSlider,
-  };
-
   return (
     <ThemeProvider theme={muiTheme}>
       <ConfigProvider
@@ -73,21 +47,14 @@ export const App = () => {
               onLoadingChange={setIsLoading}
             />
             <Stack spacing={4}>
-              <UILibraryCard
-                libraryInfo={uiLibrariesData[0]}
-                components={muiComponents}
-                isLoading={isLoading}
-              />
-              <UILibraryCard
-                libraryInfo={uiLibrariesData[1]}
-                components={antdComponents}
-                isLoading={isLoading}
-              />
-              <UILibraryCard
-                libraryInfo={uiLibrariesData[2]}
-                components={chakraComponents}
-                isLoading={isLoading}
-              />
+              {uiLibrariesData.map((libraryInfo, index) => (
+                <UILibraryCard
+                  key={libraryInfo.name}
+                  libraryInfo={libraryInfo}
+                  components={muiComponents}
+                  isLoading={isLoading}
+                />
+              ))}
             </Stack>
           </Container>
         </ChakraProvider>

@@ -40,7 +40,7 @@ export const uiLibrariesData: UILibraryInfo[] = [
   {
     name: "mantine",
     description: "libraries.mantine.description",
-    logoUrl: "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/logo.png",
+    logoUrl: "https://mantine.dev/favicon.svg",
     metrics: {
       downloads: 28900000,
       totalComponents: 100,
@@ -49,7 +49,7 @@ export const uiLibrariesData: UILibraryInfo[] = [
   {
     name: "heroui",
     description: "libraries.heroui.description",
-    logoUrl: "https://heroicons.com/favicon-32x32.png",
+    logoUrl: "https://www.heroui.com/favicon.svg",
     metrics: {
       downloads: 12500000,
       totalComponents: 35,
@@ -85,7 +85,7 @@ export const uiLibrariesData: UILibraryInfo[] = [
   {
     name: "radix",
     description: "libraries.radix.description",
-    logoUrl: "https://www.radix-ui.com/favicon.ico",
+    logoUrl: "https://avatars.githubusercontent.com/u/75042455?s=280&v=4",
     metrics: {
       downloads: 22100000,
       totalComponents: 40,
@@ -94,19 +94,10 @@ export const uiLibrariesData: UILibraryInfo[] = [
   {
     name: "headlessui",
     description: "libraries.headlessui.description",
-    logoUrl: "https://repository-images.githubusercontent.com/278164308/17e59f00-c244-11ea-9ef5-b294eafcd7fc",
+    logoUrl: "https://headlessui.com/favicon.ico",
     metrics: {
       downloads: 31200000,
       totalComponents: 30,
-    },
-  },
-  {
-    name: "joy",
-    description: "libraries.joy.description",
-    logoUrl: "https://mui.com/static/joy-ui/logo.svg",
-    metrics: {
-      downloads: 15600000,
-      totalComponents: 35,
     },
   },
   {
@@ -130,7 +121,7 @@ export const uiLibrariesData: UILibraryInfo[] = [
   {
     name: "grommet",
     description: "libraries.grommet.description",
-    logoUrl: "https://v2.grommet.io/img/grommet-icon.svg",
+    logoUrl: "https://avatars.githubusercontent.com/u/14203820?s=280&v=4",
     metrics: {
       downloads: 12400000,
       totalComponents: 55,
@@ -166,7 +157,7 @@ export const uiLibrariesData: UILibraryInfo[] = [
   {
     name: "circuit",
     description: "libraries.circuit.description",
-    logoUrl: "https://circuit.sumup.com/favicon.ico",
+    logoUrl: "https://circuit.sumup.com/favicon.svg",
     metrics: {
       downloads: 7800000,
       totalComponents: 35,
@@ -175,7 +166,7 @@ export const uiLibrariesData: UILibraryInfo[] = [
   {
     name: "geist",
     description: "libraries.geist.description",
-    logoUrl: "https://geist-ui.dev/icons/geist.svg",
+    logoUrl: "https://geist-ui.dev/favicon.ico",
     metrics: {
       downloads: 9600000,
       totalComponents: 40,
@@ -184,7 +175,7 @@ export const uiLibrariesData: UILibraryInfo[] = [
   {
     name: "park",
     description: "libraries.park.description",
-    logoUrl: "https://park.buildo.io/favicon.ico",
+    logoUrl: "https://park-ui.com/favicon.ico",
     metrics: {
       downloads: 6500000,
       totalComponents: 30,
@@ -200,15 +191,6 @@ export const uiLibrariesData: UILibraryInfo[] = [
     },
   },
   {
-    name: "kendo",
-    description: "libraries.kendo.description",
-    logoUrl: "https://www.telerik.com/kendo-react-ui/components/images/kendoka.png",
-    metrics: {
-      downloads: 21500000,
-      totalComponents: 100,
-    },
-  },
-  {
     name: "rewind",
     description: "libraries.rewind.description",
     logoUrl: "https://rewind-ui.dev/favicon.ico",
@@ -218,18 +200,9 @@ export const uiLibrariesData: UILibraryInfo[] = [
     },
   },
   {
-    name: "smarthr",
-    description: "libraries.smarthr.description",
-    logoUrl: "https://smarthr.design/static/favicon.ico",
-    metrics: {
-      downloads: 3900000,
-      totalComponents: 30,
-    },
-  },
-  {
     name: "baseui",
     description: "libraries.baseui.description",
-    logoUrl: "https://raw.githubusercontent.com/uber/baseweb/master/docs/pages/images/base-web.svg",
+    logoUrl: "https://baseweb.design/_next/static/media/base-web.6a623681.svg",
     metrics: {
       downloads: 8700000,
       totalComponents: 45,
@@ -238,7 +211,7 @@ export const uiLibrariesData: UILibraryInfo[] = [
   {
     name: "magicui",
     description: "libraries.magicui.description",
-    logoUrl: "https://magic-ui.design/favicon.ico",
+    logoUrl: "https://magicui.design/favicon.ico",
     metrics: {
       downloads: 3100000,
       totalComponents: 25,
@@ -274,28 +247,10 @@ export const uiLibrariesData: UILibraryInfo[] = [
   {
     name: "helsinki",
     description: "libraries.helsinki.description",
-    logoUrl: "https://hds.hel.fi/static/favicon/favicon.ico",
+    logoUrl: "data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNzggMzYiIHRpdGxlPSJIZWxzaW5naW4ga2F1cHVua2kiIHJvbGU9ImltZyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoCiAgICAgICAgZD0iTTc1Ljc1MyAyLjI1MXYyMC43YzAgMy45NS0zLjI3NSA3LjE3OC03LjMxIDcuMTc4aC0yMi4yNmMtMi42NzQgMC01LjIwNS45Ni03LjE4MyAyLjczOWExMC43NDkgMTAuNzQ5IDAgMDAtNy4xODMtMi43NEg5LjUwOWMtNC4wMDMgMC03LjI0Ny0zLjIxLTcuMjQ3LTcuMTc3VjIuMjVoNzMuNDkxek00MC4xODcgMzQuODM1YTguNDcgOC40NyAwIDAxNi4wMTItMi40NzFoMjIuMjQ1YzUuMjY4IDAgOS41NTYtNC4yMTkgOS41NTYtOS40MTNWMEgwdjIyLjkzNWMwIDUuMTk0IDQuMjU2IDkuNDEzIDkuNTA5IDkuNDEzaDIyLjMwOGMyLjI2MyAwIDQuMzk4Ljg4MiA2LjAxMiAyLjQ3MUwzOS4wMTYgMzZsMS4xNy0xLjE2NXoiCiAgICAgICAgZmlsbD0iY3VycmVudENvbG9yIiAvPgogICAgPHBhdGgKICAgICAgICBkPSJNNjcuNTIyIDExLjY3NmMwIC42ODEtLjU1NiAxLjE3Ny0xLjI1NSAxLjE3Ny0uNyAwLTEuMjU1LS40OTYtMS4yNTUtMS4xNzcgMC0uNjgyLjU1Ni0xLjE3OCAxLjI1NS0xLjE3OC43LS4wMyAxLjI1NS40NjUgMS4yNTUgMS4xNzh6bS0yLjM1MiA5LjYyMmgyLjE3OHYtNy41NDZINjUuMTd2Ny41NDZ6bS0zLjkwOS00LjU1NmwyLjg0NSA0LjU1NmgtMi4zNjhsLTEuOTA3LTMuMDIyLTEuMDMzIDEuMjcxdjEuNzVoLTIuMTYxVjEwLjQ1M2gyLjE2djUuMDA0YzAgLjkzLS4xMSAxLjg2LS4xMSAxLjg2aC4wNDdzLjUwOS0uODIxLjkzOC0xLjQxbDEuNjUzLTIuMTU0aDIuNTQybC0yLjYwNiAyLjk5em0tNi44MTctLjI3OGMwLTEuODc1LS45MzgtMi44OTgtMi40MzItMi44OTgtMS4yNzEgMC0xLjkzOS43MjgtMi4zMiAxLjQyNmgtLjA0OGwuMTEyLTEuMjRoLTIuMTYydjcuNTQ2aDIuMTYyVjE2LjgyYzAtLjg2OC41MjQtMS40NzIgMS4zMzUtMS40NzIuODEgMCAxLjE2LjUyNyAxLjE2IDEuNTM0djQuNDE2aDIuMTc3bC4wMTYtNC44MzR6bS04LjkzMS00Ljc4OGMwIC42ODEtLjU1NyAxLjE3Ny0xLjI1NiAxLjE3Ny0uNyAwLTEuMjU1LS40OTYtMS4yNTUtMS4xNzcgMC0uNjgyLjU1Ni0xLjE3OCAxLjI1NS0xLjE3OC43MTUtLjAzIDEuMjU2LjQ2NSAxLjI1NiAxLjE3OHptLTIuMzUyIDkuNjIyaDIuMTc3di03LjU0Nkg0My4xNnY3LjU0NnptLTMuNzUtMi4xMDdjMC0uNjA1LS44NTktLjcyOS0xLjg2LTEuMDA4LTEuMTYtLjI5NC0yLjYyMi0uODY3LTIuNjIyLTIuMzA4IDAtMS40MjYgMS4zOTgtMi4zMjQgMy4wNTEtMi4zMjQgMS41NDEgMCAyLjk1Ni43MTIgMy41NDQgMS43MmwtMS44NiAxLjAyMmMtLjE5LS42NjYtLjc2Mi0xLjE5My0xLjYyLTEuMTkzLS41NTcgMC0xLjAxOC4yMzItMS4wMTguNjgyIDAgLjU3MyAxLjAxOC42MzUgMi4xNjIuOTkxIDEuMjA4LjM3MiAyLjMyLjkxNSAyLjMyIDIuMjk0IDAgMS41MTgtMS40NDYgMi40MTctMy4xMTUgMi40MTctMS44MTEgMC0zLjI0Mi0uNzQ0LTMuODc3LTEuOTUybDEuODktMS4wMzljLjI0LjgyMi45MjIgMS40NDEgMS45NTUgMS40NDEuNjIgMCAxLjA1LS4yNDggMS4wNS0uNzQzem0tNi44ODItOC42NzdoLTIuMTc3djguNjkyYzAgLjc3NS4xNzUgMS4zNDguNTA5IDEuNzA1LjM1LjM1Ni44OS41MjYgMS42MzYuNTI2LjI1NSAwIC41MjUtLjAzLjc4LS4wNzcuMjctLjA2Mi40NzYtLjE0LjY1LS4yMzNsLjE5MS0xLjQyNWEyLjA3IDIuMDcgMCAwMS0uNDYuMTI0Yy0uMTI4LjAzLS4yODcuMDMtLjQ2MS4wMy0uMjg2IDAtLjQxNC0uMDc3LS41MDktLjIxNi0uMTExLS4xNC0uMTU5LS4zODctLjE1OS0uNzQ0di04LjM4MnptLTcuMjQ2IDQuNTdjLS43OTUgMC0xLjQ0Ni41NTgtMS42MjEgMS41ODFoMy4wNWMuMDE3LS44OTktLjU4Ny0xLjU4LTEuNDMtMS41OHptMy4zNTMgMy4wMDdIMjMuNjNjLjA5NSAxLjIyNC43OTQgMS44MjggMS43IDEuODI4LjgxIDAgMS4zNjctLjUyNyAxLjQ5NC0xLjI0bDEuODI4IDEuMDA3Yy0uNTQuOTYxLTEuNyAxLjc5OC0zLjMyMiAxLjc5OC0yLjE2IDAtMy43NS0xLjQ3Mi0zLjc1LTMuOTUxIDAtMi40NjQgMS42Mi0zLjk1MSAzLjcwMy0zLjk1MSAyLjA4MSAwIDMuNDY0IDEuNDQgMy40NjQgMy40ODYtLjAxNi42MDQtLjExMSAxLjAyMy0uMTExIDEuMDIzem0tMTEuMDc3IDMuMjA3aDIuMjU3VjEwLjkxNmgtMi4yNTd2NC4xMDdoLTQuMjQzdi00LjA5MUgxMS4wNnYxMC4zNjZoMi4yNTZ2LTQuMjkyaDQuMjQzdjQuMjkyeiIKICAgICAgICBmaWxsPSJjdXJyZW50Q29sb3IiIC8+Cjwvc3ZnPg==",
     metrics: {
       downloads: 2100000,
       totalComponents: 35,
-    },
-  },
-  {
-    name: "spark",
-    description: "libraries.spark.description",
-    logoUrl: "https://sparkdesignsystem.com/favicon.ico",
-    metrics: {
-      downloads: 1900000,
-      totalComponents: 30,
-    },
-  },
-  {
-    name: "aksara",
-    description: "libraries.aksara.description",
-    logoUrl: "https://aksara-ui.netlify.app/favicon.ico",
-    metrics: {
-      downloads: 1500000,
-      totalComponents: 25,
     },
   },
   {
@@ -307,13 +262,5 @@ export const uiLibrariesData: UILibraryInfo[] = [
       totalComponents: 20,
     },
   },
-  {
-    name: "restyle",
-    description: "libraries.restyle.description",
-    logoUrl: "https://shopify.github.io/restyle/img/favicon.ico",
-    metrics: {
-      downloads: 3400000,
-      totalComponents: 15,
-    },
-  },
+
 ]; 

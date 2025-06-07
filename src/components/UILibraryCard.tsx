@@ -79,7 +79,7 @@ export const UILibraryCard = ({
               lineHeight: { xs: 1.4, sm: 1.5 },
             }}
           >
-            {t(libraryInfo.description)}
+            {t(`libraries.${libraryInfo.name}.description`)}
           </Typography>
 
           <Box

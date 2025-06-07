@@ -26,6 +26,110 @@
     "chakra": {
       "name": "Chakra UI",
       "description": "A simple, modular and accessible component library that gives you the building blocks to build React applications"
+    },
+    "shadcn": {
+      "name": "Shadcn UI",
+      "description": "A collection of reusable and beautifully designed React components built with Radix UI and Tailwind CSS"
+    },
+    "mantine": {
+      "name": "Mantine UI",
+      "description": "A fully featured React component library with over 100 customizable components and useful hooks"
+    },
+    "heroui": {
+      "name": "Hero UI",
+      "description": "Beautiful ready-to-use UI components designed to seamlessly integrate with Tailwind CSS"
+    },
+    "react-bootstrap": {
+      "name": "React Bootstrap",
+      "description": "The most popular React component library rebuilt from scratch with Bootstrap 5"
+    },
+    "primereact": {
+      "name": "PrimeReact",
+      "description": "A rich open-source UI component suite for React with over 90 flexible components"
+    },
+    "semantic": {
+      "name": "Semantic UI React",
+      "description": "The official React integration for Semantic UI with an intuitive declarative API"
+    },
+    "radix": {
+      "name": "Radix UI",
+      "description": "Unstyled, low-level UI components that are accessible and customizable for building high-quality design systems"
+    },
+    "headlessui": {
+      "name": "Headless UI",
+      "description": "Completely unstyled, fully accessible UI components, designed to integrate perfectly with Tailwind CSS"
+    },
+    "flowbite": {
+      "name": "Flowbite React",
+      "description": "UI component library built with Tailwind CSS featuring modern and responsive design"
+    },
+    "amplify": {
+      "name": "AWS Amplify UI",
+      "description": "Production-ready React components that work seamlessly with AWS backend services"
+    },
+    "grommet": {
+      "name": "Grommet",
+      "description": "A React UI framework that provides accessibility, modularity, responsiveness, and theming"
+    },
+    "blueprint": {
+      "name": "Blueprint",
+      "description": "A set of React UI components optimized for building complex, data-dense interfaces"
+    },
+    "horizon": {
+      "name": "Horizon UI",
+      "description": "The most elegant and modern admin component library for React"
+    },
+    "tamagui": {
+      "name": "Tamagui",
+      "description": "A universal UI system for React Native and Web with optimized performance"
+    },
+    "circuit": {
+      "name": "Circuit UI",
+      "description": "A modern and accessible React component library with minimalist design"
+    },
+    "geist": {
+      "name": "Geist UI",
+      "description": "An elegant and minimalist React UI framework optimized for the best user experience"
+    },
+    "park": {
+      "name": "Park UI",
+      "description": "High-quality UI components built on top of Ark UI with a focus on accessibility"
+    },
+    "yamada": {
+      "name": "Yamada UI",
+      "description": "A fresh and modern React UI framework with customizable components and flexible themes"
+    },
+    "rewind": {
+      "name": "Rewind UI",
+      "description": "Modern and accessible UI components built on top of Tailwind CSS"
+    },
+    "baseui": {
+      "name": "Base Web",
+      "description": "A React design framework implemented with flexibility and accessibility in mind"
+    },
+    "magicui": {
+      "name": "Magic UI",
+      "description": "React UI components with unique visual effects and magical animations"
+    },
+    "arkui": {
+      "name": "Ark UI",
+      "description": "High-performance headless components with a strong focus on accessibility"
+    },
+    "reactbits": {
+      "name": "React Bits",
+      "description": "Modern collection of React UI components with minimalist and elegant design"
+    },
+    "wix": {
+      "name": "Wix UI",
+      "description": "Enterprise React component library used in Wix products"
+    },
+    "helsinki": {
+      "name": "Helsinki Design",
+      "description": "Official design system of the City of Helsinki implemented in React"
+    },
+    "shoutem": {
+      "name": "Shoutem UI",
+      "description": "React Native component library with modern and customizable design"
     }
   },
   "seo": {
