@@ -29,6 +29,13 @@ export const AntdDialog = ({ isLoading }: ComponentProps) => {
         open={isOpen}
         onOk={() => setIsOpen(false)}
         onCancel={() => setIsOpen(false)}
+        centered
+        width={400}
+        footer={[
+          <Button key="cancel" onClick={() => setIsOpen(false)}>
+            Close
+          </Button>,
+        ]}
       >
         <p>Dialog Content Description</p>
       </Modal>

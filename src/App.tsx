@@ -10,7 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import { ConfigProvider, theme as antdTheme } from "antd";
-import { ChakraProvider, defaultSystem } from "@chakra-ui/react";
+import { ChakraProvider, Theme, defaultSystem } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import TrendingDownIcon from "@mui/icons-material/TrendingDown";
@@ -22,11 +22,21 @@ import { MuiTextField } from "./components/mui/MuiTextField";
 import { MuiDialog } from "./components/mui/MuiDialog";
 import { MuiRating } from "./components/mui/MuiRating";
 import { MuiSlider } from "./components/mui/MuiSlider";
+import { AntdButton } from "./components/antd/AntdButton";
+import { AntdTextField } from "./components/antd/AntdTextField";
+import { AntdDialog } from "./components/antd/AntdDialog";
+import { AntdRating } from "./components/antd/AntdRating";
+import { AntdSlider } from "./components/antd/AntdSlider";
+import { ChakraButton } from "./components/chakra/ChakraButton";
+import { ChakraTextField } from "./components/chakra/ChakraTextField";
+import { ChakraDialog } from "./components/chakra/ChakraDialog";
+import { ChakraRating } from "./components/chakra/ChakraRating";
+import { ChakraSlider } from "./components/chakra/ChakraSlider";
 import { UILibraryCard } from "./components/UILibraryCard";
 import { Header } from "./components/Header";
 import { getTheme } from "./theme/mui-theme";
 import { uiLibrariesData } from "./data/ui-libraries";
-import type { UILibraryInfo } from "./types/ui-library";
+import type { UILibraryInfo, UILibraryComponents } from "./types/ui-library";
 import "./i18n/config";
 
 type SortCriteria = "name" | "downloads" | "components";
@@ -42,12 +52,41 @@ export const App = () => {
   const muiTheme = getTheme(isDarkMode ? "dark" : "light");
   const { defaultAlgorithm, darkAlgorithm } = antdTheme;
 
-  const muiComponents = {
-    Button: MuiButton,
-    TextField: MuiTextField,
-    Dialog: MuiDialog,
-    Rating: MuiRating,
-    Slider: MuiSlider,
+  const libraryComponents = {
+    mui: {
+      Button: MuiButton,
+      TextField: MuiTextField,
+      Dialog: MuiDialog,
+      Rating: MuiRating,
+      Slider: MuiSlider,
+    },
+    antd: {
+      Button: AntdButton,
+      TextField: AntdTextField,
+      Dialog: AntdDialog,
+      Rating: AntdRating,
+      Slider: AntdSlider,
+    },
+    chakra: {
+      Button: ChakraButton,
+      TextField: ChakraTextField,
+      Dialog: ChakraDialog,
+      Rating: ChakraRating,
+      Slider: ChakraSlider,
+    },
+  };
+
+  const getLibraryComponents = (libraryName: string): UILibraryComponents => {
+    switch (libraryName.toLowerCase()) {
+      case "mui":
+        return libraryComponents.mui;
+      case "antd":
+        return libraryComponents.antd;
+      case "chakra":
+        return libraryComponents.chakra;
+      default:
+        return libraryComponents.mui; // Default to MUI components
+    }
   };
 
   const handleSortCriteriaChange = (
@@ -86,87 +125,96 @@ export const App = () => {
       <ConfigProvider
         theme={{
           algorithm: isDarkMode ? darkAlgorithm : defaultAlgorithm,
+          token: {
+            colorPrimary: "#1890ff",
+            borderRadius: 6,
+          },
         }}
       >
         <ChakraProvider value={defaultSystem}>
-          <CssBaseline />
-          <Container
-            maxWidth="lg"
-            sx={{
-              py: 8,
-              position: "relative",
-              mt: { xs: 6, sm: 8 },
-            }}
-          >
-            <Header
-              isDarkMode={isDarkMode}
-              isLoading={isLoading}
-              onDarkModeChange={() => setIsDarkMode(!isDarkMode)}
-              onLoadingChange={setIsLoading}
-            />
-
-            <Box
+          <Theme appearance={isDarkMode ? "dark" : "light"}>
+            <CssBaseline />
+            <Container
+              maxWidth="lg"
               sx={{
-                display: "flex",
-                gap: 2,
-                alignItems: "center",
-                mb: 3,
-                flexWrap: "wrap",
+                py: 8,
+                position: "relative",
+                mt: { xs: 6, sm: 8 },
               }}
             >
-              <Typography variant="body2" color="text.secondary">
-                {t("sort.orderBy")}:
-              </Typography>
-              <ToggleButtonGroup
-                value={sortCriteria}
-                exclusive
-                onChange={handleSortCriteriaChange}
-                aria-label="sort criteria"
-                size="small"
+              <Header
+                isDarkMode={isDarkMode}
+                isLoading={isLoading}
+                onDarkModeChange={() => setIsDarkMode(!isDarkMode)}
+                onLoadingChange={setIsLoading}
+              />
+
+              <Box
+                sx={{
+                  display: "flex",
+                  gap: 2,
+                  alignItems: "center",
+                  mb: 3,
+                  flexWrap: "wrap",
+                }}
               >
-                <ToggleButton value="downloads" aria-label="sort by downloads">
-                  <DownloadIcon fontSize="small" sx={{ mr: 0.5 }} />
-                  {t("sort.downloads")}
-                </ToggleButton>
-                <ToggleButton
-                  value="components"
-                  aria-label="sort by components"
+                <Typography variant="body2" color="text.secondary">
+                  {t("sort.orderBy")}:
+                </Typography>
+                <ToggleButtonGroup
+                  value={sortCriteria}
+                  exclusive
+                  onChange={handleSortCriteriaChange}
+                  aria-label="sort criteria"
+                  size="small"
                 >
-                  <ExtensionIcon fontSize="small" sx={{ mr: 0.5 }} />
-                  {t("sort.components")}
-                </ToggleButton>
-                <ToggleButton value="name" aria-label="sort by name">
-                  <SortByAlphaIcon fontSize="small" sx={{ mr: 0.5 }} />
-                  {t("sort.name")}
-                </ToggleButton>
-              </ToggleButtonGroup>
+                  <ToggleButton
+                    value="downloads"
+                    aria-label="sort by downloads"
+                  >
+                    <DownloadIcon fontSize="small" sx={{ mr: 0.5 }} />
+                    {t("sort.downloads")}
+                  </ToggleButton>
+                  <ToggleButton
+                    value="components"
+                    aria-label="sort by components"
+                  >
+                    <ExtensionIcon fontSize="small" sx={{ mr: 0.5 }} />
+                    {t("sort.components")}
+                  </ToggleButton>
+                  <ToggleButton value="name" aria-label="sort by name">
+                    <SortByAlphaIcon fontSize="small" sx={{ mr: 0.5 }} />
+                    {t("sort.name")}
+                  </ToggleButton>
+                </ToggleButtonGroup>
 
-              <ToggleButton
-                value={sortOrder}
-                selected={sortOrder === "desc"}
-                onChange={handleSortOrderChange}
-                aria-label="sort order"
-                size="small"
-              >
-                {sortOrder === "desc" ? (
-                  <TrendingDownIcon fontSize="small" />
-                ) : (
-                  <TrendingUpIcon fontSize="small" />
-                )}
-              </ToggleButton>
-            </Box>
+                <ToggleButton
+                  value={sortOrder}
+                  selected={sortOrder === "desc"}
+                  onChange={handleSortOrderChange}
+                  aria-label="sort order"
+                  size="small"
+                >
+                  {sortOrder === "desc" ? (
+                    <TrendingDownIcon fontSize="small" />
+                  ) : (
+                    <TrendingUpIcon fontSize="small" />
+                  )}
+                </ToggleButton>
+              </Box>
 
-            <Stack spacing={4}>
-              {sortedLibraries.map((libraryInfo: UILibraryInfo) => (
-                <UILibraryCard
-                  key={libraryInfo.name}
-                  libraryInfo={libraryInfo}
-                  components={muiComponents}
-                  isLoading={isLoading}
-                />
-              ))}
-            </Stack>
-          </Container>
+              <Stack spacing={4}>
+                {sortedLibraries.map((libraryInfo: UILibraryInfo) => (
+                  <UILibraryCard
+                    key={libraryInfo.name}
+                    libraryInfo={libraryInfo}
+                    components={getLibraryComponents(libraryInfo.name)}
+                    isLoading={isLoading}
+                  />
+                ))}
+              </Stack>
+            </Container>
+          </Theme>
         </ChakraProvider>
       </ConfigProvider>
     </ThemeProvider>
