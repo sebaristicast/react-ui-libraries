@@ -55,15 +55,15 @@ export const uiLibrariesData: UILibraryInfo[] = [
   //     totalComponents: 35,
   //   },
   // },
-  // {
-  //   name: "react-bootstrap",
-  //   description: "libraries.react-bootstrap.description",
-  //   logoUrl: "https://react-bootstrap.github.io/img/logo.svg",
-  //   metrics: {
-  //     downloads: 45600000,
-  //     totalComponents: 50,
-  //   },
-  // },
+  {
+    name: "react-bootstrap",
+    description: "libraries.react-bootstrap.description",
+    logoUrl: "https://react-bootstrap.github.io/img/logo.svg",
+    metrics: {
+      downloads: 45600000,
+      totalComponents: 50,
+    },
+  },
   // {
   //   name: "primereact",
   //   description: "libraries.primereact.description",

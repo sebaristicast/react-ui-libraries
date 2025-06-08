@@ -11,6 +11,8 @@ import {
 } from "@mui/material";
 import { ConfigProvider, theme as antdTheme } from "antd";
 import { ChakraProvider, Theme, defaultSystem } from "@chakra-ui/react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles/bootstrap-dark.css";
 import { useTranslation } from "react-i18next";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import TrendingDownIcon from "@mui/icons-material/TrendingDown";
@@ -38,6 +40,11 @@ import { getTheme } from "./theme/mui-theme";
 import { uiLibrariesData } from "./data/ui-libraries";
 import type { UILibraryInfo, UILibraryComponents } from "./types/ui-library";
 import "./i18n/config";
+import { ReactBootstrapButton } from "./components/react-bootstrap/ReactBootstrapButton";
+import { ReactBootstrapTextField } from "./components/react-bootstrap/ReactBootstrapTextField";
+import { ReactBootstrapDialog } from "./components/react-bootstrap/ReactBootstrapDialog";
+import { ReactBootstrapRating } from "./components/react-bootstrap/ReactBootstrapRating";
+import { ReactBootstrapSlider } from "./components/react-bootstrap/ReactBootstrapSlider";
 
 type SortCriteria = "name" | "downloads" | "components";
 type SortOrder = "asc" | "desc";
@@ -74,6 +81,13 @@ export const App = () => {
       Rating: ChakraRating,
       Slider: ChakraSlider,
     },
+    "react-bootstrap": {
+      Button: ReactBootstrapButton,
+      TextField: ReactBootstrapTextField,
+      Dialog: ReactBootstrapDialog,
+      Rating: ReactBootstrapRating,
+      Slider: ReactBootstrapSlider,
+    },
   };
 
   const getLibraryComponents = (libraryName: string): UILibraryComponents => {
@@ -84,6 +98,8 @@ export const App = () => {
         return libraryComponents.antd;
       case "chakra":
         return libraryComponents.chakra;
+      case "react-bootstrap":
+        return libraryComponents["react-bootstrap"];
       default:
         return libraryComponents.mui; // Default to MUI components
     }
@@ -141,6 +157,7 @@ export const App = () => {
                 position: "relative",
                 mt: { xs: 6, sm: 8 },
               }}
+              data-bs-theme={isDarkMode ? "dark" : "light"}
             >
               <Header
                 isDarkMode={isDarkMode}

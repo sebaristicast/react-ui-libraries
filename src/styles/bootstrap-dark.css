@@ -1,0 +1,33 @@
+/* Dark mode overrides for Bootstrap components */
+[data-bs-theme="dark"] .modal-dark .modal-content {
+  background-color: #212529;
+  color: #fff;
+}
+
+[data-bs-theme="dark"] .modal-dark .modal-header {
+  border-bottom-color: #373b3e;
+}
+
+[data-bs-theme="dark"] .modal-dark .modal-footer {
+  border-top-color: #373b3e;
+}
+
+[data-bs-theme="dark"] .form-control {
+  background-color: #212529;
+  border-color: #495057;
+  color: #fff;
+}
+
+[data-bs-theme="dark"] .form-control:focus {
+  background-color: #2b3035;
+  border-color: #86b7fe;
+  color: #fff;
+}
+
+[data-bs-theme="dark"] .form-range::-webkit-slider-runnable-track {
+  background-color: #495057;
+}
+
+[data-bs-theme="dark"] .form-range::-moz-range-track {
+  background-color: #495057;
+} 
