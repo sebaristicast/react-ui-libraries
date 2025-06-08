@@ -82,15 +82,15 @@ export const uiLibrariesData: UILibraryInfo[] = [
   //     totalComponents: 48,
   //   },
   // },
-  // {
-  //   name: "radix",
-  //   description: "libraries.radix.description",
-  //   logoUrl: "https://avatars.githubusercontent.com/u/75042455?s=280&v=4",
-  //   metrics: {
-  //     downloads: 22100000,
-  //     totalComponents: 40,
-  //   },
-  // },
+  {
+    name: "radix",
+    description: "libraries.radix.description",
+    logoUrl: "https://avatars.githubusercontent.com/u/75042455?s=280&v=4",
+    metrics: {
+      downloads: 22100000,
+      totalComponents: 40,
+    },
+  },
   // {
   //   name: "headlessui",
   //   description: "libraries.headlessui.description",

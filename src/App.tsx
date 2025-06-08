@@ -11,6 +11,8 @@ import {
 } from "@mui/material";
 import { ConfigProvider, theme as antdTheme } from "antd";
 import { ChakraProvider, Theme, defaultSystem } from "@chakra-ui/react";
+import { Theme as RadixTheme } from "@radix-ui/themes";
+import "@radix-ui/themes/styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/bootstrap-dark.css";
 import { useTranslation } from "react-i18next";
@@ -34,17 +36,22 @@ import { ChakraTextField } from "./components/chakra/ChakraTextField";
 import { ChakraDialog } from "./components/chakra/ChakraDialog";
 import { ChakraRating } from "./components/chakra/ChakraRating";
 import { ChakraSlider } from "./components/chakra/ChakraSlider";
+import { ReactBootstrapButton } from "./components/react-bootstrap/ReactBootstrapButton";
+import { ReactBootstrapTextField } from "./components/react-bootstrap/ReactBootstrapTextField";
+import { ReactBootstrapDialog } from "./components/react-bootstrap/ReactBootstrapDialog";
+import { ReactBootstrapRating } from "./components/react-bootstrap/ReactBootstrapRating";
+import { ReactBootstrapSlider } from "./components/react-bootstrap/ReactBootstrapSlider";
+import { RadixButton } from "./components/radix/RadixButton";
+import { RadixTextField } from "./components/radix/RadixTextField";
+import { RadixDialog } from "./components/radix/RadixDialog";
+import { RadixRating } from "./components/radix/RadixRating";
+import { RadixSlider } from "./components/radix/RadixSlider";
 import { UILibraryCard } from "./components/UILibraryCard";
 import { Header } from "./components/Header";
 import { getTheme } from "./theme/mui-theme";
 import { uiLibrariesData } from "./data/ui-libraries";
 import type { UILibraryInfo, UILibraryComponents } from "./types/ui-library";
 import "./i18n/config";
-import { ReactBootstrapButton } from "./components/react-bootstrap/ReactBootstrapButton";
-import { ReactBootstrapTextField } from "./components/react-bootstrap/ReactBootstrapTextField";
-import { ReactBootstrapDialog } from "./components/react-bootstrap/ReactBootstrapDialog";
-import { ReactBootstrapRating } from "./components/react-bootstrap/ReactBootstrapRating";
-import { ReactBootstrapSlider } from "./components/react-bootstrap/ReactBootstrapSlider";
 
 type SortCriteria = "name" | "downloads" | "components";
 type SortOrder = "asc" | "desc";
@@ -88,6 +95,13 @@ export const App = () => {
       Rating: ReactBootstrapRating,
       Slider: ReactBootstrapSlider,
     },
+    radix: {
+      Button: RadixButton,
+      TextField: RadixTextField,
+      Dialog: RadixDialog,
+      Rating: RadixRating,
+      Slider: RadixSlider,
+    },
   };
 
   const getLibraryComponents = (libraryName: string): UILibraryComponents => {
@@ -100,6 +114,8 @@ export const App = () => {
         return libraryComponents.chakra;
       case "react-bootstrap":
         return libraryComponents["react-bootstrap"];
+      case "radix":
+        return libraryComponents.radix;
       default:
         return libraryComponents.mui; // Default to MUI components
     }
@@ -149,88 +165,90 @@ export const App = () => {
       >
         <ChakraProvider value={defaultSystem}>
           <Theme appearance={isDarkMode ? "dark" : "light"}>
-            <CssBaseline />
-            <Container
-              maxWidth="lg"
-              sx={{
-                py: 8,
-                position: "relative",
-                mt: { xs: 6, sm: 8 },
-              }}
-              data-bs-theme={isDarkMode ? "dark" : "light"}
-            >
-              <Header
-                isDarkMode={isDarkMode}
-                isLoading={isLoading}
-                onDarkModeChange={() => setIsDarkMode(!isDarkMode)}
-                onLoadingChange={setIsLoading}
-              />
-
-              <Box
+            <RadixTheme appearance={isDarkMode ? "dark" : "light"}>
+              <CssBaseline />
+              <Container
+                maxWidth="lg"
                 sx={{
-                  display: "flex",
-                  gap: 2,
-                  alignItems: "center",
-                  mb: 3,
-                  flexWrap: "wrap",
+                  py: 8,
+                  position: "relative",
+                  mt: { xs: 6, sm: 8 },
                 }}
+                data-bs-theme={isDarkMode ? "dark" : "light"}
               >
-                <Typography variant="body2" color="text.secondary">
-                  {t("sort.orderBy")}:
-                </Typography>
-                <ToggleButtonGroup
-                  value={sortCriteria}
-                  exclusive
-                  onChange={handleSortCriteriaChange}
-                  aria-label="sort criteria"
-                  size="small"
-                >
-                  <ToggleButton
-                    value="downloads"
-                    aria-label="sort by downloads"
-                  >
-                    <DownloadIcon fontSize="small" sx={{ mr: 0.5 }} />
-                    {t("sort.downloads")}
-                  </ToggleButton>
-                  <ToggleButton
-                    value="components"
-                    aria-label="sort by components"
-                  >
-                    <ExtensionIcon fontSize="small" sx={{ mr: 0.5 }} />
-                    {t("sort.components")}
-                  </ToggleButton>
-                  <ToggleButton value="name" aria-label="sort by name">
-                    <SortByAlphaIcon fontSize="small" sx={{ mr: 0.5 }} />
-                    {t("sort.name")}
-                  </ToggleButton>
-                </ToggleButtonGroup>
+                <Header
+                  isDarkMode={isDarkMode}
+                  isLoading={isLoading}
+                  onDarkModeChange={() => setIsDarkMode(!isDarkMode)}
+                  onLoadingChange={setIsLoading}
+                />
 
-                <ToggleButton
-                  value={sortOrder}
-                  selected={sortOrder === "desc"}
-                  onChange={handleSortOrderChange}
-                  aria-label="sort order"
-                  size="small"
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 2,
+                    alignItems: "center",
+                    mb: 3,
+                    flexWrap: "wrap",
+                  }}
                 >
-                  {sortOrder === "desc" ? (
-                    <TrendingDownIcon fontSize="small" />
-                  ) : (
-                    <TrendingUpIcon fontSize="small" />
-                  )}
-                </ToggleButton>
-              </Box>
+                  <Typography variant="body2" color="text.secondary">
+                    {t("sort.orderBy")}:
+                  </Typography>
+                  <ToggleButtonGroup
+                    value={sortCriteria}
+                    exclusive
+                    onChange={handleSortCriteriaChange}
+                    aria-label="sort criteria"
+                    size="small"
+                  >
+                    <ToggleButton
+                      value="downloads"
+                      aria-label="sort by downloads"
+                    >
+                      <DownloadIcon fontSize="small" sx={{ mr: 0.5 }} />
+                      {t("sort.downloads")}
+                    </ToggleButton>
+                    <ToggleButton
+                      value="components"
+                      aria-label="sort by components"
+                    >
+                      <ExtensionIcon fontSize="small" sx={{ mr: 0.5 }} />
+                      {t("sort.components")}
+                    </ToggleButton>
+                    <ToggleButton value="name" aria-label="sort by name">
+                      <SortByAlphaIcon fontSize="small" sx={{ mr: 0.5 }} />
+                      {t("sort.name")}
+                    </ToggleButton>
+                  </ToggleButtonGroup>
 
-              <Stack spacing={4}>
-                {sortedLibraries.map((libraryInfo: UILibraryInfo) => (
-                  <UILibraryCard
-                    key={libraryInfo.name}
-                    libraryInfo={libraryInfo}
-                    components={getLibraryComponents(libraryInfo.name)}
-                    isLoading={isLoading}
-                  />
-                ))}
-              </Stack>
-            </Container>
+                  <ToggleButton
+                    value={sortOrder}
+                    selected={sortOrder === "desc"}
+                    onChange={handleSortOrderChange}
+                    aria-label="sort order"
+                    size="small"
+                  >
+                    {sortOrder === "desc" ? (
+                      <TrendingDownIcon fontSize="small" />
+                    ) : (
+                      <TrendingUpIcon fontSize="small" />
+                    )}
+                  </ToggleButton>
+                </Box>
+
+                <Stack spacing={4}>
+                  {sortedLibraries.map((libraryInfo: UILibraryInfo) => (
+                    <UILibraryCard
+                      key={libraryInfo.name}
+                      libraryInfo={libraryInfo}
+                      components={getLibraryComponents(libraryInfo.name)}
+                      isLoading={isLoading}
+                    />
+                  ))}
+                </Stack>
+              </Container>
+            </RadixTheme>
           </Theme>
         </ChakraProvider>
       </ConfigProvider>
