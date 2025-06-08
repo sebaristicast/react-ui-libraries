@@ -3,6 +3,12 @@
     "title": "React UI Libraries 2025",
     "skeletons": "Show Skeletons"
   },
+  "sort": {
+    "orderBy": "Order by",
+    "downloads": "Downloads",
+    "components": "Components",
+    "name": "Name"
+  },
   "metrics": {
     "downloads": "Downloads",
     "components": "Components"

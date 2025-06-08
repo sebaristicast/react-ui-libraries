@@ -3,6 +3,12 @@
     "title": "Bibliotecas UI React 2025",
     "skeletons": "Mostrar Skeletons"
   },
+  "sort": {
+    "orderBy": "Ordenar por",
+    "downloads": "Descargas",
+    "components": "Componentes",
+    "name": "Nombre"
+  },
   "metrics": {
     "downloads": "Descargas",
     "components": "Componentes"

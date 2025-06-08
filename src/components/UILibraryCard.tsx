@@ -7,6 +7,8 @@ import {
   Stack,
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import DownloadIcon from "@mui/icons-material/Download";
+import ExtensionIcon from "@mui/icons-material/Extension";
 import type { UILibraryInfo, UILibraryComponents } from "../types/ui-library";
 
 interface UILibraryCardProps {
@@ -25,12 +27,50 @@ const formatNumber = (num: number): string => {
   return num.toString();
 };
 
-const InfoItem = ({ label, value }: { label: string; value: string }) => (
-  <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-    <Typography variant="caption" color="text.secondary">
-      {label}:
+const InfoItem = ({
+  icon,
+  value,
+}: {
+  icon: React.ReactNode;
+  value: string;
+}) => (
+  <Box
+    sx={{
+      display: "flex",
+      alignItems: "center",
+      gap: 1,
+      bgcolor: "action.hover",
+      px: 2,
+      py: 1,
+      borderRadius: 2,
+      transition: "all 0.2s ease",
+      "&:hover": {
+        bgcolor: "action.selected",
+        transform: "translateY(-2px)",
+        "& .icon": {
+          color: "primary.main",
+          transform: "scale(1.1)",
+        },
+      },
+    }}
+  >
+    <Box
+      className="icon"
+      sx={{
+        color: "text.secondary",
+        display: "flex",
+        alignItems: "center",
+        transition: "all 0.2s ease",
+        "& > svg": {
+          fontSize: "1.5rem",
+        },
+      }}
+    >
+      {icon}
+    </Box>
+    <Typography variant="body1" fontWeight="medium">
+      {value}
     </Typography>
-    <Typography variant="caption">{value}</Typography>
   </Box>
 );
 
@@ -50,7 +90,7 @@ export const UILibraryCard = ({
           "&:last-child": { pb: { xs: 1.5, sm: 2 } },
         }}
       >
-        <Stack spacing={{ xs: 0.5, sm: 1 }}>
+        <Stack spacing={{ xs: 1.5, sm: 2 }}>
           <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
             <Box
               component="img"
@@ -86,15 +126,15 @@ export const UILibraryCard = ({
             sx={{
               display: "flex",
               gap: { xs: 2, sm: 3 },
-              fontSize: { xs: "0.75rem", sm: "0.875rem" },
+              justifyContent: "center",
             }}
           >
             <InfoItem
-              label={t("metrics.downloads")}
+              icon={<DownloadIcon />}
               value={formatNumber(libraryInfo.metrics.downloads)}
             />
             <InfoItem
-              label={t("metrics.components")}
+              icon={<ExtensionIcon />}
               value={libraryInfo.metrics.totalComponents.toString()}
             />
           </Box>

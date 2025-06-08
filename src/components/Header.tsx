@@ -33,15 +33,19 @@ export const Header = ({
   return (
     <Box
       sx={{
-        position: "absolute",
-        top: { xs: 8, sm: 16 },
+        position: "fixed",
+        top: 0,
         left: 0,
         right: 0,
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
         px: { xs: 1, sm: 2 },
+        py: { xs: 1, sm: 2 },
         gap: { xs: 1, sm: 2 },
+        bgcolor: theme.palette.background.default,
+        borderBottom: `1px solid ${theme.palette.divider}`,
+        zIndex: theme.zIndex.appBar,
       }}
     >
       <Box sx={{ display: "flex", gap: { xs: 0.5, sm: 1 } }}>
