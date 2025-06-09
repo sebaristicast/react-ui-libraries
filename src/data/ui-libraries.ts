@@ -118,15 +118,15 @@ export const uiLibrariesData: UILibraryInfo[] = [
   //     totalComponents: 35,
   //   },
   // },
-  // {
-  //   name: "grommet",
-  //   description: "libraries.grommet.description",
-  //   logoUrl: "https://avatars.githubusercontent.com/u/14203820?s=280&v=4",
-  //   metrics: {
-  //     downloads: 12400000,
-  //     totalComponents: 55,
-  //   },
-  // },
+  {
+    name: "grommet",
+    description: "libraries.grommet.description",
+    logoUrl: "https://avatars.githubusercontent.com/u/14203820?s=280&v=4",
+    metrics: {
+      downloads: 12400000,
+      totalComponents: 55,
+    },
+  },
   // {
   //   name: "blueprint",
   //   description: "libraries.blueprint.description",
