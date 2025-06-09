@@ -127,15 +127,15 @@ export const uiLibrariesData: UILibraryInfo[] = [
       totalComponents: 55,
     },
   },
-  // {
-  //   name: "blueprint",
-  //   description: "libraries.blueprint.description",
-  //   logoUrl: "https://cloud.githubusercontent.com/assets/464822/20228152/d3f36dc2-a804-11e6-80ff-51ada2d13ea7.png",
-  //   metrics: {
-  //     downloads: 14500000,
-  //     totalComponents: 40,
-  //   },
-  // },
+  {
+    name: "blueprint",
+    description: "libraries.blueprint.description",
+    logoUrl: "https://cloud.githubusercontent.com/assets/464822/20228152/d3f36dc2-a804-11e6-80ff-51ada2d13ea7.png",
+    metrics: {
+      downloads: 14500000,
+      totalComponents: 40,
+    },
+  },
   // {
   //   name: "horizon",
   //   description: "libraries.horizon.description",

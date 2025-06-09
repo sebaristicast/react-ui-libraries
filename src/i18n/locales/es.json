@@ -59,43 +59,43 @@
     },
     "radix": {
       "name": "Radix UI",
-      "description": "Componentes UI sin estilos y de bajo nivel, accesibles y personalizables para crear sistemas de diseño de alta calidad"
+      "description": "Componentes UI sin estilos, de bajo nivel que son accesibles y personalizables para construir sistemas de diseño de alta calidad"
     },
     "headlessui": {
       "name": "Headless UI",
-      "description": "Componentes UI completamente accesibles y sin estilos, diseñados para integrarse perfectamente con Tailwind CSS"
+      "description": "Componentes UI completamente sin estilos, totalmente accesibles, diseñados para integrarse perfectamente con Tailwind CSS"
     },
     "flowbite": {
       "name": "Flowbite React",
-      "description": "Biblioteca de componentes UI construida con Tailwind CSS con un diseño moderno y responsivo"
+      "description": "Biblioteca de componentes UI construida con Tailwind CSS que presenta un diseño moderno y responsivo"
     },
     "amplify": {
       "name": "AWS Amplify UI",
-      "description": "Componentes React listos para producción que funcionan sin problemas con los servicios backend de AWS"
+      "description": "Componentes React listos para producción que funcionan perfectamente con los servicios backend de AWS"
     },
     "grommet": {
       "name": "Grommet",
-      "description": "Un marco de trabajo UI React que proporciona accesibilidad, modularidad, capacidad de respuesta y temas"
+      "description": "Un framework UI de React que proporciona accesibilidad, modularidad, capacidad de respuesta y tematización"
     },
     "blueprint": {
       "name": "Blueprint",
-      "description": "Un conjunto de componentes React UI optimizados para construir interfaces complejas y orientadas a datos"
+      "description": "Un conjunto de componentes React UI optimizados para construir interfaces complejas y densas en datos"
     },
     "horizon": {
       "name": "Horizon UI",
-      "description": "La biblioteca de componentes administrativos más elegante y moderna para React"
+      "description": "La biblioteca de componentes admin más elegante y moderna para React"
     },
     "tamagui": {
       "name": "Tamagui",
-      "description": "Un sistema UI universal para React Native y Web con un rendimiento optimizado"
+      "description": "Un sistema UI universal para React Native y Web con rendimiento optimizado"
     },
     "circuit": {
       "name": "Circuit UI",
-      "description": "Una biblioteca de componentes React moderna y accesible con un diseño minimalista"
+      "description": "Una biblioteca de componentes React moderna y accesible con diseño minimalista"
     },
     "geist": {
       "name": "Geist UI",
-      "description": "Un marco de trabajo UI React elegante y minimalista optimizado para la mejor experiencia de usuario"
+      "description": "Un framework UI React elegante y minimalista optimizado para la mejor experiencia de usuario"
     },
     "park": {
       "name": "Park UI",
@@ -103,7 +103,7 @@
     },
     "yamada": {
       "name": "Yamada UI",
-      "description": "Un marco de trabajo UI React fresco y moderno con componentes personalizables y temas flexibles"
+      "description": "Un framework UI React fresco y moderno con componentes personalizables y temas flexibles"
     },
     "rewind": {
       "name": "Rewind UI",
@@ -111,7 +111,7 @@
     },
     "baseui": {
       "name": "Base Web",
-      "description": "Un marco de trabajo de diseño React implementado con flexibilidad y accesibilidad en mente"
+      "description": "Un framework de diseño React implementado con flexibilidad y accesibilidad en mente"
     },
     "magicui": {
       "name": "Magic UI",
@@ -123,11 +123,11 @@
     },
     "reactbits": {
       "name": "React Bits",
-      "description": "Colección moderna de componentes React UI con un diseño minimalista y elegante"
+      "description": "Colección moderna de componentes UI React con diseño minimalista y elegante"
     },
     "wix": {
       "name": "Wix UI",
-      "description": "Biblioteca de componentes React empresarial utilizada en los productos de Wix"
+      "description": "Biblioteca de componentes React empresarial utilizada en productos Wix"
     },
     "helsinki": {
       "name": "Helsinki Design",
@@ -135,7 +135,7 @@
     },
     "shoutem": {
       "name": "Shoutem UI",
-      "description": "Biblioteca de componentes React Native con un diseño moderno y personalizable"
+      "description": "Biblioteca de componentes React Native con diseño moderno y personalizable"
     }
   },
   "seo": {

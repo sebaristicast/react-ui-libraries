@@ -52,12 +52,20 @@ import { GrommetTextField } from "./components/grommet/GrommetTextField";
 import { GrommetDialog } from "./components/grommet/GrommetDialog";
 import { GrommetRating } from "./components/grommet/GrommetRating";
 import { GrommetSlider } from "./components/grommet/GrommetSlider";
+import { BlueprintButton } from "./components/blueprint/BlueprintButton";
+import { BlueprintTextField } from "./components/blueprint/BlueprintTextField";
+import { BlueprintDialog } from "./components/blueprint/BlueprintDialog";
+import { BlueprintRating } from "./components/blueprint/BlueprintRating";
+import { BlueprintSlider } from "./components/blueprint/BlueprintSlider";
 import { UILibraryCard } from "./components/UILibraryCard";
 import { Header } from "./components/Header";
 import { getTheme } from "./theme/mui-theme";
 import { uiLibrariesData } from "./data/ui-libraries";
 import type { UILibraryInfo, UILibraryComponents } from "./types/ui-library";
+import type { ComponentProps } from "./types/component-props";
+import type { ComponentType } from "react";
 import "./i18n/config";
+import { withBlueprintDarkMode } from "./components/blueprint/withBlueprintDarkMode";
 
 type SortCriteria = "name" | "downloads" | "components";
 type SortOrder = "asc" | "desc";
@@ -115,6 +123,13 @@ export const App = () => {
       Rating: GrommetRating,
       Slider: GrommetSlider,
     },
+    blueprint: {
+      Button: withBlueprintDarkMode(BlueprintButton, isDarkMode),
+      TextField: withBlueprintDarkMode(BlueprintTextField, isDarkMode),
+      Dialog: withBlueprintDarkMode(BlueprintDialog, isDarkMode),
+      Rating: withBlueprintDarkMode(BlueprintRating, isDarkMode),
+      Slider: withBlueprintDarkMode(BlueprintSlider, isDarkMode),
+    },
   };
 
   const getLibraryComponents = (libraryName: string): UILibraryComponents => {
@@ -131,6 +146,8 @@ export const App = () => {
         return libraryComponents.radix;
       case "grommet":
         return libraryComponents.grommet;
+      case "blueprint":
+        return libraryComponents.blueprint;
       default:
         return libraryComponents.mui;
     }
