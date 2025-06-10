@@ -146,7 +146,7 @@ export const uiLibrariesData: UILibraryInfo[] = [
   //   },
   // },
   // {
-  //   name: "tamagui",
+  //   name: "tamaguui",
   //   description: "libraries.tamagui.description",
   //   logoUrl: "https://tamagui.dev/favicon.svg",
   //   metrics: {
